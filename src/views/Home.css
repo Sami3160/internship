@@ -1,0 +1,30 @@
+.home{
+    background-color: #282C33;
+    width: 100%;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
+    padding: 20px;
+  }
+
+  @media (max-width: 1200px) {
+    .movies-grid {
+      grid-template-columns: repeat(3, 1fr); 
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .movies-grid {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+  
+  /* @media (max-width: 600px) {
+    .movies-grid {
+      grid-template-columns: 1fr; 
+    }
+  }
+   */

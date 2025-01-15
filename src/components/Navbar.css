@@ -1,0 +1,39 @@
+nav {
+    /* padding: 10px; */
+    /* margin-bottom: 10px; */
+    background: #333A3F;
+}
+.nav-main{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+a {
+    text-decoration: none;
+    color: #70777a;
+}   
+ul {
+    list-style-type: none;
+    /* font-weight: 200; */
+    font-size:medium;
+    display: flex;
+    align-items: center;
+    /* color: #5B6063; */
+}
+
+li {
+    display: inline;
+    margin-right: 20px;
+}
+
+
+
+a:hover {
+    color: #eee;
+}
+
+a.active {
+     /* text-decoration: underline;  */
+     font-size: larger;
+}

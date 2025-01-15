@@ -1,0 +1,80 @@
+.heading {
+    margin: 5px 30px;
+    display: flex;
+    border-radius: 10px;
+    background-color: #010B17;
+    min-height: 50vh;
+}
+.details{
+    width: 50%;
+    padding: 10px;
+}
+
+.poster {
+    width: 100px;
+}
+
+.banner {
+    width: 50%;
+    overflow: hidden; 
+    border-radius: 0 10px 10px 0 ;
+}
+  
+
+.cast{
+    overflow-x: scroll;
+    display: flex;
+    gap: 10px;
+}
+
+.main-card {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    width: 200px;
+    align-items: start;
+  }
+
+.img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .title {
+    color: white;
+    font-size: 12px;
+    /* font-weight: bolder; */
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    text-align: start;
+  }
+  
+  .rating {
+    font-size: 12px;
+    color: white;
+    padding: 0;
+    margin-top: 3px;
+    text-align: start;
+  }
+/*   
+  @media (max-width: 1200px) {
+    .main-card {
+      width: 250px;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .main-card {
+      width: 200px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .main-card {
+      width: 100%;
+    }
+  } */
