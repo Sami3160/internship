@@ -3,7 +3,7 @@ import './Home.css'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux'
-import {  setTopRatedMovies } from '../slices/movieSlice'
+import { setTopRatedMovies } from '../slices/movieSlice'
 import MovieCard from '../components/MovieCard'
 
 export default function Home() {
@@ -17,13 +17,24 @@ export default function Home() {
       dispatch(setTopRatedMovies(response.data.results))
     }
     fetchTopRated()
-  }, [dispatch])
+  }, [dispatch,page])
   return (
     <div className="home">
-      <div className="movies-grid" style={{paddingRight:'10px '}}>
+      <div className="movies-grid" style={{ paddingRight: '10px ' }}>
         {topRated.map((movie) => (
-          <MovieCard key={movie.id} movie={movie}/>
+          <MovieCard key={movie.id} movie={movie} />
         ))}
+      </div>
+      <div className='page-component'>
+        <button onClick={() => {
+          if (page == 1) {
+            alert("page is at 1")
+          } else {
+            updatePage((p) => p - 1)
+          }
+        }}>load previous</button>
+        <p>Page: {page}</p>
+        <button onClick={() => updatePage((p) => p + 1)}>load next</button>
       </div>
     </div>
   )

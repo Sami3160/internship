@@ -17,13 +17,24 @@ export default function Home() {
       dispatch(setUpcomingMovies(response.data.results))
     }
     fetchUpcomingMovies()
-  }, [dispatch])
+  }, [dispatch, page])
   return (
     <div className="home">
-      <div className="movies-grid" style={{paddingRight:'10px '}}>
+      <div className="movies-grid" style={{ paddingRight: '10px ' }}>
         {popularMovies.map((movie) => (
-          <MovieCard key={movie.id} movie={movie}/>
+          <MovieCard key={movie.id} movie={movie} />
         ))}
+      </div>
+      <div className='page-component'>
+        <button onClick={() => {
+          if (page == 1) {
+            alert("page is at 1")
+          } else {
+            updatePage((p) => p - 1)
+          }
+        }}>load previous</button>
+        <p>Page: {page}</p>
+        <button onClick={() => updatePage((p) => p + 1)}>load next</button>
       </div>
     </div>
   )

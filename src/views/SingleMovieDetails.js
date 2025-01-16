@@ -29,7 +29,7 @@ export default function SingleMovieDetails() {
             <div className="heading" >
                 <div className="details">
                     <div style={{ padding: '5px', display: 'flex', gap: '10px' }}>
-                        <img className="poster" src={`${process.env.REACT_APP_BASE_IMAGE_URL + info.poster_path}`} alt=""/>
+                        <img className="poster" src={`${process.env.REACT_APP_BASE_IMAGE_URL + info.poster_path}`} alt="" />
                         <div style={{ display: 'flex', flexDirection: 'column' }}>
                             <p style={{ margin: '0', color: 'white', fontSize: '30px' }}>{info.title}</p>
                             <p style={{ margin: '0', color: '#789DC7', fontSize: '20px', marginBottom: '10px' }}>Rating: {info.vote_average}</p>
@@ -74,7 +74,7 @@ export default function SingleMovieDetails() {
 
 const CastCard = ({ c, crew }) => {
     return <div className="main-card">
-        <img className="img" src={`${process.env.REACT_APP_BASE_IMAGE_URL + c.profile_path}`} alt="some img" />
+        <img width="250px" className="img1" src={`${process.env.REACT_APP_BASE_IMAGE_URL + c.profile_path}`} alt="some img" />
         <p className="title">{c.name}</p>
         {crew ?
             <p className="rating">Job: {c.job}</p>
