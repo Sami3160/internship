@@ -29,7 +29,7 @@ export default function SingleMovieDetails() {
             <div className="heading" >
                 <div className="details">
                     <div style={{ padding: '5px', display: 'flex', gap: '10px' }}>
-                        <img className="poster" src={`${process.env.REACT_APP_BASE_IMAGE_URL + info.poster_path}`} />
+                        <img className="poster" src={`${process.env.REACT_APP_BASE_IMAGE_URL + info.poster_path}`} alt=""/>
                         <div style={{ display: 'flex', flexDirection: 'column' }}>
                             <p style={{ margin: '0', color: 'white', fontSize: '30px' }}>{info.title}</p>
                             <p style={{ margin: '0', color: '#789DC7', fontSize: '20px', marginBottom: '10px' }}>Rating: {info.vote_average}</p>
